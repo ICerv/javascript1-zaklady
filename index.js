@@ -82,8 +82,26 @@ Představme si, že jste pořadatelé ultramaratonského závodu. Závod začín
 Založte si JavaScriptový program a uložte čas startu závodu do proměnné start. Do proměnné delka uložte délku závodu pro nějakého běžce. Klidně může být pomalejší než náš šampion. Do proměnné konec spočítejte, v kolik hodin závod pro našeho běžce skončí a vypište její obsah do stránky. Vyzkoušejte různé délky a ověřte, že váš postup funguje.
 */
 
-const start = 15;
-const delka = 11;
-const konec = (start + delka) % 24;
-document.body.innerHTML += '<h3>Zavod pro naseho bezce skonci v ' + konec + ' hodin.</h3>'
+// const start = 15;
+// const delka = 11;
+// const konec = (start + delka) % 24;
+// document.body.innerHTML += '<h3>Zavod pro naseho bezce skonci v ' + konec + ' hodin.</h3>'
 
+/*****ZADÁNÍ 7.*****/
+/*
+Příjem divadla
+
+a. Jeden lístek do divadla Pěst na oko stojí 12 euro. Spočítejte měsíční příjem divadla ze vstupného přichází-li průměrně 174 návštěvníků na jedno představení a divadlo hraje 15 představení měsíčně. Uložte výsledek do proměnné prijem.
+b. Divadlo se rozhodlo prodávat studentské vstupné ve výši 65 % plného vstupného. Jak se změní měsíční příjem divadla pokud víme, že 40 % návštěvníků jsou studenti?
+*/
+
+const vstupne = 12;
+const pocetNavstevniku = 174;
+const pocetPredstaveni = 15;
+const prijem = vstupne * pocetNavstevniku * pocetPredstaveni;
+document.body.innerHTML += '<p>Příjem divadla: ' + prijem + ' Kč</p>';
+
+const studentskeVstupne = vstupne * 0.65;
+const navstevaStudentu = 0.4;
+const novyPrijem = (vstupne * (1 - navstevaStudentu) + studentskeVstupne * navstevaStudentu) * pocetNavstevniku * pocetPredstaveni;
+document.body.innerHTML += '<p>Prijem divadla se slevou pro studenty: ' + novyPrijem + ' Kc</p>';
