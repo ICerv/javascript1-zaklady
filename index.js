@@ -43,7 +43,17 @@ Vytvořte řetězec obsahující vaši e-mailovou adresu.
 Sestavte e-mailovou adresu tak, že sečtete dohromady vaše křestní jméno, znak tečka, vaše příjmení a koncovku @mujmail.com.
 */
 
-const email = 'inna.cervenkova@gmail.com';
-document.body.innerHTML = '<h2>E-mail:</h2>' + ' inna' + '.' + 'cervenkova' + '@gmail.com' + '.'
+// const email = 'inna.cervenkova@gmail.com';
+// document.body.innerHTML = '<h2>E-mail:</h2>' + ' inna' + '.' + 'cervenkova' + '@gmail.com' + '.'
+
+
+/*****ZADÁNÍ 4.*****/
+/*
+Náhodná čísla
+
+Založte si JavaScriptový program a pomocí document.body.innerHTML a funkce Math.random zobrazte na stránce náhodné číslo. Zkuste stránku několikrát po sobě obnovit a ověřte si, že pokaždé obdržíte jiné číslo.
+*/
+
+document.body.innerHTML += Math.random();
 
 
