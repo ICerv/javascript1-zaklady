@@ -14,13 +14,12 @@ b.Pokud pracujete na živnostenský list, můžete si odečíst 60 % příjmů j
 // `
 
 //b.
-// const vyplata = 7 * 265 * 21;
-// const dan = Math.floor(vyplata * 0.4 * 0.15);  //Math.floor(21 * 7 * 265 * (1 - 0.6) * 0.15);
-// document.body.innerHTML += `
-// <h2> Daň z výplaty</h2>
-// <p> Zaplať daň z výplaty: ${dan} Kč.</p>
-// `
-
+const vyplata = 7 * 265 * 21;
+const dan = Math.floor(vyplata * 0.4 * 0.15);  //Math.floor(21 * 7 * 265 * (1 - 0.6) * 0.15);
+document.body.innerHTML += `
+<h2> Daň z výplaty</h2>
+ <p> Zaplať daň z výplaty: ${dan} Kč.</p>
+`
 
 /*****ZADÁNÍ 2.*****/
 /*
@@ -37,14 +36,14 @@ V programu kin se často uvádí délka filmu v minutách. Například rozšíř
 // <p>Film <em>Pán prstenů: Dvě věže</em> trvá ${delkaFilmuVHodinach}h ${delkaZbyvajicichMinut}min. </p>
 // `
 
-/*****ZADÁNÍ 2.*****/
+/*****ZADÁNÍ 3.*****/
 /*
 E-mail
 Vytvořte řetězec obsahující vaši e-mailovou adresu.
 Sestavte e-mailovou adresu tak, že sečtete dohromady vaše křestní jméno, znak tečka, vaše příjmení a koncovku @mujmail.com.
 */
 
-const email = 'inna.cervenkova@gmail.com';
-document.body.innerHTML = '<h2>E-mail:</h2>' + ' inna' + '.' + 'cervenkova' + '@gmail.com' + '.'
+// const email = 'inna.cervenkova@gmail.com';
+// document.body.innerHTML = '<h2>E-mail:</h2>' + ' inna' + '.' + 'cervenkova' + '@gmail.com' + '.'
 
 
