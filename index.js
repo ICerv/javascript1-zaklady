@@ -57,7 +57,7 @@ Založte si JavaScriptový program a pomocí document.body.innerHTML a funkce Ma
 // document.body.innerHTML += Math.random();
 
 
-/*****ZADÁNÍ 4.*****/
+/*****ZADÁNÍ 5.*****/
 /*
 Převod měny
 
@@ -67,7 +67,23 @@ c. Vypište obsah proměnné wageInCzk do webové stránky tak, aby na stránce 
 Mzda v korunách: 532 Kč
 */
 
-const wageInEur = 20;
-const rate = 26.58;
-const wageInCzk = Math.ceil(wageInEur * rate);
-document.body.innerHTML += '<h1>Mzda v korunách: ' + wageInCzk + ' Kč</h1>'
+// const wageInEur = 20;
+// const rate = 26.58;
+// const wageInCzk = Math.ceil(wageInEur * rate);
+// document.body.innerHTML += '<h1>Mzda v korunách: ' + wageInCzk + ' Kč</h1>'
+
+
+/*****ZADÁNÍ 6.*****/
+/*
+Ultramaraton
+
+Představme si, že jste pořadatelé ultramaratonského závodu. Závod začíná ve tři hodiny odpoledne, což ve 24-hodinovém formátu zapíšeme jako 15. Nejlepší běžec zvládne vaši brutální trasu za 10 hodin. Doběhne tedy v jednu hodinu ráno, v našem formátu zapsáno jako 1.
+
+Založte si JavaScriptový program a uložte čas startu závodu do proměnné start. Do proměnné delka uložte délku závodu pro nějakého běžce. Klidně může být pomalejší než náš šampion. Do proměnné konec spočítejte, v kolik hodin závod pro našeho běžce skončí a vypište její obsah do stránky. Vyzkoušejte různé délky a ověřte, že váš postup funguje.
+*/
+
+const start = 15;
+const delka = 11;
+const konec = (start + delka) % 24;
+document.body.innerHTML += '<h3>Zavod pro naseho bezce skonci v ' + konec + ' hodin.</h3>'
+
