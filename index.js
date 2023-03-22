@@ -29,18 +29,22 @@ Délka filmu
 V programu kin se často uvádí délka filmu v minutách. Například rozšířená verze filmu Pán prstenů: Dvě věže trvá 223 minut. My bychom ovšem délku filmu raději věděli v hodinách a minutách. Za použití funkcí a operátorů z této lekce spočítejte, kolik hodin a minut trvá film Pán prstenů: Dvě věže.
 */
 
-const delkaFilmuVMinutach = 223;
-const delkaFilmuVHodinach = Math.floor(delkaFilmuVMinutach / 60);
-const delkaZbyvajicichMinut = delkaFilmuVMinutach % 60;
-document.body.innerHTML += `
-<h2>Délka filmu</h2>
-<p>Film <em>Pán prstenů: Dvě věže</em> trvá ${delkaFilmuVHodinach}h ${delkaZbyvajicichMinut}min. </p>
-`
+// const delkaFilmuVMinutach = 223;
+// const delkaFilmuVHodinach = Math.floor(delkaFilmuVMinutach / 60);
+// const delkaZbyvajicichMinut = delkaFilmuVMinutach % 60;
+// document.body.innerHTML += `
+// <h2>Délka filmu</h2>
+// <p>Film <em>Pán prstenů: Dvě věže</em> trvá ${delkaFilmuVHodinach}h ${delkaZbyvajicichMinut}min. </p>
+// `
 
 /*****ZADÁNÍ 2.*****/
 /*
 E-mail
 Vytvořte řetězec obsahující vaši e-mailovou adresu.
 Sestavte e-mailovou adresu tak, že sečtete dohromady vaše křestní jméno, znak tečka, vaše příjmení a koncovku @mujmail.com.
-
 */
+
+const email = 'inna.cervenkova@gmail.com';
+document.body.innerHTML = '<h2>E-mail:</h2>' + ' inna' + '.' + 'cervenkova' + '@gmail.com' + '.'
+
+
