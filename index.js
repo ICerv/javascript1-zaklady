@@ -54,6 +54,20 @@ Náhodná čísla
 Založte si JavaScriptový program a pomocí document.body.innerHTML a funkce Math.random zobrazte na stránce náhodné číslo. Zkuste stránku několikrát po sobě obnovit a ověřte si, že pokaždé obdržíte jiné číslo.
 */
 
-document.body.innerHTML += Math.random();
+// document.body.innerHTML += Math.random();
 
 
+/*****ZADÁNÍ 4.*****/
+/*
+Převod měny
+
+a. Dejme tomu, že si jako programátoři vyděláváte 20 euro na hodinu. Uložte tuto hodnotu do proměnné wageInEur.
+b. Spočítejte, kolik je vaše hodinová mzda v českých korunách, jestliže kurz eura je 26.58 Kč. Výsledek zaokrouhlete na celé koruny a uložte do proměnné wageInCzk.
+c. Vypište obsah proměnné wageInCzk do webové stránky tak, aby na stránce byl nadpis h1 s obsahem:
+Mzda v korunách: 532 Kč
+*/
+
+const wageInEur = 20;
+const rate = 26.58;
+const wageInCzk = Math.ceil(wageInEur * rate);
+document.body.innerHTML += '<h1>Mzda v korunách: ' + wageInCzk + ' Kč</h1>'
