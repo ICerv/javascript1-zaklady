@@ -29,14 +29,13 @@ Délka filmu
 V programu kin se často uvádí délka filmu v minutách. Například rozšířená verze filmu Pán prstenů: Dvě věže trvá 223 minut. My bychom ovšem délku filmu raději věděli v hodinách a minutách. Za použití funkcí a operátorů z této lekce spočítejte, kolik hodin a minut trvá film Pán prstenů: Dvě věže.
 */
 
-const hodiny = Math.floor(223 / 60);
-const mintuty = 223 % 60;
-const delkaFilmu = hodiny + mintuty
-console.log(delkaFilmu)
-
-
-
-
+const delkaFilmuVMinutach = 223;
+const delkaFilmuVHodinach = Math.floor(delkaFilmuVMinutach / 60);
+const delkaZbyvajicichMinut = delkaFilmuVMinutach % 60;
+document.body.innerHTML += `
+<h2>Délka filmu</h2>
+<p>Film <em>Pán prstenů: Dvě věže</em> trvá ${delkaFilmuVHodinach}h ${delkaZbyvajicichMinut}min. </p>
+`
 
 /*****ZADÁNÍ 2.*****/
 /*
