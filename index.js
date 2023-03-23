@@ -95,13 +95,36 @@ a. Jeden lístek do divadla Pěst na oko stojí 12 euro. Spočítejte měsíčn�
 b. Divadlo se rozhodlo prodávat studentské vstupné ve výši 65 % plného vstupného. Jak se změní měsíční příjem divadla pokud víme, že 40 % návštěvníků jsou studenti?
 */
 
-const vstupne = 12;
-const pocetNavstevniku = 174;
-const pocetPredstaveni = 15;
-const prijem = vstupne * pocetNavstevniku * pocetPredstaveni;
-document.body.innerHTML += '<p>Příjem divadla: ' + prijem + ' Kč</p>';
+// const vstupne = 12;
+// const pocetNavstevniku = 174;
+// const pocetPredstaveni = 15;
+// const prijem = vstupne * pocetNavstevniku * pocetPredstaveni;
+// document.body.innerHTML += '<p>Příjem divadla: ' + prijem + ' Kč</p>';
 
-const studentskeVstupne = vstupne * 0.65;
-const navstevaStudentu = 0.4;
-const novyPrijem = (vstupne * (1 - navstevaStudentu) + studentskeVstupne * navstevaStudentu) * pocetNavstevniku * pocetPredstaveni;
-document.body.innerHTML += '<p>Prijem divadla se slevou pro studenty: ' + novyPrijem + ' Kc</p>';
+// const studentskeVstupne = vstupne * 0.65;
+// const navstevaStudentu = 0.4;
+// const novyPrijem = (vstupne * (1 - navstevaStudentu) + studentskeVstupne * navstevaStudentu) * pocetNavstevniku * pocetPredstaveni;    
+// document.body.innerHTML += '<p>Prijem divadla se slevou pro studenty: ' + novyPrijem + ' Kc</p>';
+
+
+
+/*****ZADÁNÍ 7.*****/
+/*
+Schopnější zaokrouhlování
+
+Mějme v proměnné x uloženo nějaké desetinné číslo. Pomocí funkce Math.round jej můžeme zaokrouhlit na celá čísla takto.
+
+> Math.round(x)
+Co kdybychom však chtěli zaokrouhlit na desetiny, setiny nebo třeba celé stovky? Napište program, který pomocí funkce Math.round
+
+a. zaokrouhlí číslo x s přesností na desetiny,
+b. zaokrouhlí číslo x s přesností na setiny,
+c. zaokrouhlí číslo x s přesností na celé stovky.
+*/
+
+const x = 2564.46471;
+const naDesetiny = Math.round(x * 10) / 10;
+const naSetiny = Math.round(x * 100) / 100;
+const naCeleStovky = Math.round(x * 100) * 100;
+
+document.body.innerHTML += '<p>Zaokrouhleni na desetiny: ' + naDesetiny + ',' + ' na setiny: ' + naSetiny + ',' + ' na cele stovky: ' + naCeleStovky + '</p>';
