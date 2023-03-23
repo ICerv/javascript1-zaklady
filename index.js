@@ -139,6 +139,22 @@ Vymyslete jak použít funkci Math.random a různé zaokrouhlovací funkce prob�
 Zamyslete se nad tím, zda vámi vytvořený výraz generuje všechna čísla skutečně se stejnou pravděpodobností. Vemte v úvahu, že funkce Math.random generuje náhodná čísla mezi 0 (včetně) a 1 (vyjma). Je tedy malinká pravěpodobnost, že občas padne přesně číslo 0. Naopak číslo 1 padnout nemůže.
 */
 
-const hodKostkou = Math.floor(Math.random() * 6 + 1);
+// const hodKostkou = Math.floor(Math.random() * 6 + 1);
 
-document.body.innerHTML += '<p>Hod kostkou je: ' + hodKostkou
+// document.body.innerHTML += '<p>Hod kostkou je: ' + hodKostkou
+
+
+/*****ZADÁNÍ 10.*****/
+/*
+Očkování
+
+Představte si, že vyrábíte registrační systém na očkování proti COVID-19. U každého registrovaného chceme evidovat jméno a věk.
+
+Vytvořte webovou stránku, která se uživatele zeptá nejdříve na jméno a poté na věk. Tyto hodnoty si uložte do smysluplně pojmenovaných proměnných. Nezpomeňte věk převést na číslo.
+Poté, co uživatel zadá všechny údaje, vypište do stránky výstup ve tvaru
+Květoslav Voňavý, věk: 67
+*/
+
+const fullName = prompt('Zadej sve jmeno a prijmeni:');
+const age = Number(prompt('Zadej svuj vek:'));
+document.body.innerHTML += '<p>' + fullName + ',' + ' vek: ' + age + '</p>'
