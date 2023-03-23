@@ -155,6 +155,24 @@ Poté, co uživatel zadá všechny údaje, vypište do stránky výstup ve tvaru
 Květoslav Voňavý, věk: 67
 */
 
-const fullName = prompt('Zadej sve jmeno a prijmeni:');
-const age = Number(prompt('Zadej svuj vek:'));
-document.body.innerHTML += '<p>' + fullName + ',' + ' vek: ' + age + '</p>'
+// const fullName = prompt('Zadej sve jmeno a prijmeni:');
+// const age = Number(prompt('Zadej svuj vek:'));
+// document.body.innerHTML += '<p>' + fullName + ',' + ' vek: ' + age + '</p>'
+
+/*****ZADÁNÍ 1.*****/
+/*
+Výplata jako stránka
+
+a. Vytvořte webovou stránku, která uživatele požádá o jeho hodinovou sazbu v korunách a spočítá jeho hrubou mzdu za předpokladu, že pracuje 8 hodin denně 21 dní v měsíci. Do stránky vypište výsledek zabalený do nějaké přívětivé formulace. Dbejte na to, abyste korektně převedli uživatelem zadanou hodnotu na číslo.
+b. Nechte uživatele zadat nejen hodinovou sazbu, ale také počet hodin a dní v měsíci. Opět dejte pozor na správnou konverzi.
+*/
+
+const hodinovaSazba = Number(prompt('Zadej svou hodinovou sazbu v korunach:'));
+const odpracovaneHodiny = Number(prompt('Kolik hodin denne pracujes?'));
+const odpracovaneDni = Number(prompt('Kolik dni v mesici jsi opracoval?'));
+
+const hrubaMzda = hodinovaSazba * odpracovaneHodiny * odpracovaneDni;
+
+document.body.innerHTML += '<p> Tva hruba mzda cini: ' + hrubaMzda + 'Kč' + '</p>';
+
+
