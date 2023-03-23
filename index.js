@@ -159,7 +159,7 @@ Květoslav Voňavý, věk: 67
 // const age = Number(prompt('Zadej svuj vek:'));
 // document.body.innerHTML += '<p>' + fullName + ',' + ' vek: ' + age + '</p>'
 
-/*****ZADÁNÍ 1.*****/
+/*****ZADÁNÍ 11.*****/
 /*
 Výplata jako stránka
 
@@ -167,12 +167,72 @@ a. Vytvořte webovou stránku, která uživatele požádá o jeho hodinovou sazb
 b. Nechte uživatele zadat nejen hodinovou sazbu, ale také počet hodin a dní v měsíci. Opět dejte pozor na správnou konverzi.
 */
 
-const hodinovaSazba = Number(prompt('Zadej svou hodinovou sazbu v korunach:'));
-const odpracovaneHodiny = Number(prompt('Kolik hodin denne pracujes?'));
-const odpracovaneDni = Number(prompt('Kolik dni v mesici jsi opracoval?'));
+// const hodinovaSazba = Number(prompt('Zadej svou hodinovou sazbu v korunach:'));
+// const odpracovaneHodiny = Number(prompt('Kolik hodin denne pracujes?'));
+// const odpracovaneDni = Number(prompt('Kolik dni v mesici jsi opracoval?'));
 
-const hrubaMzda = hodinovaSazba * odpracovaneHodiny * odpracovaneDni;
+// const hrubaMzda = hodinovaSazba * odpracovaneHodiny * odpracovaneDni;
 
-document.body.innerHTML += '<p> Tva hruba mzda cini: ' + hrubaMzda + 'Kč' + '</p>';
+// document.body.innerHTML += '<p> Tva hruba mzda cini: ' + hrubaMzda + 'Kč' + '</p>';
+
+
+/*****ZADÁNÍ 12.*****/
+/*
+Realitka
+
+Mějme následující objekt představující inzerát na stránkách nějaké realitní kanceláře.
+Vytvořte webovou stránku s JavaScriptem, zkopírujte si tento kód do vašeho programu a vyřešte následující úkoly.
+
+a.Pomocí tečkové notace vypište do stránky dispozici bytu.
+b.Vypište do stránky čistý nájem bez poplatků.
+c.Vypište do stránky celý objekt představující výměru bytu.
+d.Pomocí destrukturování si do separátních proměnných uložte město a městskou část. Vypište je do stránky.
+e.Změnte stav inzerátu z 'free' na 'taken'.
+*/
+
+const apartment = {
+  type: 'rent',
+  disposition: '3+1',
+  area: {
+    floorage: 100,
+    balcony: 2,
+    units: 'sqm',
+  },
+  city: 'Prague',
+  district: 'Old Town',
+  price: {
+    rent: 28000,
+    fees: {
+      water: 1000,
+      energy: 2500,
+      services: 560,
+    },
+    currency: 'czk',
+  },
+  ownership: 'personal',
+  condition: 'renovated',
+  status: 'free',
+  floor: 3,
+};
+
+document.body.innerHTML += "<p>Dispozice bytu: " + apartment.disposition + "</p>"
+document.body.innerHTML += "<p>Cisty najem bez poplatku: " + apartment.price.rent + "</p>"
+document.body.innerHTML += "<p>Vymera bytu: " + apartment.area.floorage + apartment.area.units + apartment.area.balcony
+  + "</p>"
+
+// // const city= apartment.city;
+// // const district=apartment.district;
+
+const { city, district } = apartment;
+
+document.body.innerHTML += "<p>Mesto: " + city + "</p>";
+document.body.innerHTML += "<p>Mestska cast: " + district + "</p>";
+
+
+
+apartment.status = "taken";
+
+document.body.innerHTML += "<p>Stav inzeratu: " + apartment.status + "</p>";
+
 
 
