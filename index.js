@@ -108,7 +108,7 @@ b. Divadlo se rozhodlo prodávat studentské vstupné ve výši 65 % plného vst
 
 
 
-/*****ZADÁNÍ 7.*****/
+/*****ZADÁNÍ 8.*****/
 /*
 Schopnější zaokrouhlování
 
@@ -122,9 +122,23 @@ b. zaokrouhlí číslo x s přesností na setiny,
 c. zaokrouhlí číslo x s přesností na celé stovky.
 */
 
-const x = 2564.46471;
-const naDesetiny = Math.round(x * 10) / 10;
-const naSetiny = Math.round(x * 100) / 100;
-const naCeleStovky = Math.round(x * 100) * 100;
+// const x = 2564.46471;
+// const naDesetiny = Math.round(x * 10) / 10;
+// const naSetiny = Math.round(x * 100) / 100;
+// const naCeleStovky = Math.round(x * 100) * 100;
 
-document.body.innerHTML += '<p>Zaokrouhleni na desetiny: ' + naDesetiny + ',' + ' na setiny: ' + naSetiny + ',' + ' na cele stovky: ' + naCeleStovky + '</p>';
+// document.body.innerHTML += '<p>Zaokrouhleni na desetiny: ' + naDesetiny + ',' + ' na setiny: ' + naSetiny + ',' + ' na cele stovky: ' + naCeleStovky + '</p>';
+
+
+/*****ZADÁNÍ 9.*****/
+/*
+Házení kostkou
+
+Vymyslete jak použít funkci Math.random a různé zaokrouhlovací funkce probírané v této lekci k simulování hodu klasickou šestistěnnou kostkou. S použitím vhodných funkcí sestavte výraz, který vygeneruje náhodné celé číslo mezi 1 a 6.
+
+Zamyslete se nad tím, zda vámi vytvořený výraz generuje všechna čísla skutečně se stejnou pravděpodobností. Vemte v úvahu, že funkce Math.random generuje náhodná čísla mezi 0 (včetně) a 1 (vyjma). Je tedy malinká pravěpodobnost, že občas padne přesně číslo 0. Naopak číslo 1 padnout nemůže.
+*/
+
+const hodKostkou = Math.floor(Math.random() * 6 + 1);
+
+document.body.innerHTML += '<p>Hod kostkou je: ' + hodKostkou
