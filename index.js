@@ -190,49 +190,98 @@ d.Pomocí destrukturování si do separátních proměnných uložte město a m�
 e.Změnte stav inzerátu z 'free' na 'taken'.
 */
 
-const apartment = {
-  type: 'rent',
-  disposition: '3+1',
-  area: {
-    floorage: 100,
-    balcony: 2,
-    units: 'sqm',
+// const apartment = {
+//   type: 'rent',
+//   disposition: '3+1',
+//   area: {
+//     floorage: 100,
+//     balcony: 2,
+//     units: 'sqm',
+//   },
+//   city: 'Prague',
+//   district: 'Old Town',
+//   price: {
+//     rent: 28000,
+//     fees: {
+//       water: 1000,
+//       energy: 2500,
+//       services: 560,
+//     },
+//     currency: 'czk',
+//   },
+//   ownership: 'personal',
+//   condition: 'renovated',
+//   status: 'free',
+//   floor: 3,
+// };
+
+// document.body.innerHTML += "<p>Dispozice bytu: " + apartment.disposition + "</p>"
+// document.body.innerHTML += "<p>Cisty najem bez poplatku: " + apartment.price.rent + "</p>"
+// document.body.innerHTML += "<p>Vymera bytu: " + apartment.area.floorage + apartment.area.units + apartment.area.balcony
+//   + "</p>"
+
+// // // const city= apartment.city;
+// // // const district=apartment.district;
+
+// const { city, district } = apartment;
+
+// document.body.innerHTML += "<p>Mesto: " + city + "</p>";
+// document.body.innerHTML += "<p>Mestska cast: " + district + "</p>";
+
+// apartment.status = "taken";
+
+// document.body.innerHTML += "<p>Stav inzeratu: " + apartment.status + "</p>";
+
+
+/*****ZADÁNÍ 13.*****/
+/*
+Knihovna
+
+V JavaScriptovém programu vytvořte objekt představující jednu knihu v knihovně. Uvažte, jaké vlastnosti může taková kniha mít. Rozhodně budeme chtít název, autora a počet stran. Přidejte do objektu alespoň tři další vlastnosti tak, aby obsahovaly čísla, řetězce i vnořený objekt.
+Vytvořte alespoň jednu další knihu se stejnými vlastnostmi ale jinými hodnotami.
+*/
+
+const book = {
+  title: 'Lord of the Rings',
+  author: {
+    name: 'John Ronald Reuel',
+    surename: 'Tolkien',
+    age: 81,
   },
-  city: 'Prague',
-  district: 'Old Town',
-  price: {
-    rent: 28000,
-    fees: {
-      water: 1000,
-      energy: 2500,
-      services: 560,
+  numberOfPages: 2057,
+  movie: {
+    year: 2000,
+    director: {
+      name: 'Peter',
+      surname: 'Jackson',
     },
-    currency: 'czk',
+    actors: {
+      actor1: {
+        name: 'Orlando',
+        surname: 'Bloom',
+        characterName: 'Legolas',
+      },
+      actor2: {
+        name: 'Elijah',
+        surname: 'Wood',
+        characterName: 'Frodo',
+      },
+      actor3: {
+        name: 'Viggo',
+        surname: 'Mortensen',
+        characterName: 'Aragorn',
+      },
+    },
   },
-  ownership: 'personal',
-  condition: 'renovated',
-  status: 'free',
-  floor: 3,
 };
+const book1 = {
+  title: 'Pravidla mostarny',
+  author: 'John Irving',
+  pages: 324,
+  genre: 'roman',
+  edition: 2005,
 
-document.body.innerHTML += "<p>Dispozice bytu: " + apartment.disposition + "</p>"
-document.body.innerHTML += "<p>Cisty najem bez poplatku: " + apartment.price.rent + "</p>"
-document.body.innerHTML += "<p>Vymera bytu: " + apartment.area.floorage + apartment.area.units + apartment.area.balcony
-  + "</p>"
-
-// // const city= apartment.city;
-// // const district=apartment.district;
-
-const { city, district } = apartment;
-
-document.body.innerHTML += "<p>Mesto: " + city + "</p>";
-document.body.innerHTML += "<p>Mestska cast: " + district + "</p>";
-
-
-
-apartment.status = "taken";
-
-document.body.innerHTML += "<p>Stav inzeratu: " + apartment.status + "</p>";
+}
 
 
 
