@@ -233,55 +233,85 @@ e.Změnte stav inzerátu z 'free' na 'taken'.
 // document.body.innerHTML += "<p>Stav inzeratu: " + apartment.status + "</p>";
 
 
+
+
 /*****ZADÁNÍ 13.*****/
 /*
-Knihovna
+Vlastnosti a metody
 
-V JavaScriptovém programu vytvořte objekt představující jednu knihu v knihovně. Uvažte, jaké vlastnosti může taková kniha mít. Rozhodně budeme chtít název, autora a počet stran. Přidejte do objektu alespoň tři další vlastnosti tak, aby obsahovaly čísla, řetězce i vnořený objekt.
-Vytvořte alespoň jednu další knihu se stejnými vlastnostmi ale jinými hodnotami.
+V konzoli prohlížeče si založte proměnnou title a uložte do ní název svého oblíbeného filmu (např. Pán prstenů). Proveďte následující úkoly.
+*/
+/*
+const title = "Pan prstenu"
+​
+// Vypište do konzole počet znaků názvu.
+​
+title.length
+​
+// Převeďte název filmu na velká písmena.
+​
+title.toUpperCase()
+​
+// Vypište z názvu prvních pět písmen.
+​
+title.slice(0, 5)
+​
+// Vypište z názvu posledních pět písmen.
+​
+title.slice(title.length - 5, title.length)
+
 */
 
-const book = {
-  title: 'Lord of the Rings',
-  author: {
-    name: 'John Ronald Reuel',
-    surename: 'Tolkien',
-    age: 81,
-  },
-  numberOfPages: 2057,
-  movie: {
-    year: 2000,
-    director: {
-      name: 'Peter',
-      surname: 'Jackson',
-    },
-    actors: {
-      actor1: {
-        name: 'Orlando',
-        surname: 'Bloom',
-        characterName: 'Legolas',
-      },
-      actor2: {
-        name: 'Elijah',
-        surname: 'Wood',
-        characterName: 'Frodo',
-      },
-      actor3: {
-        name: 'Viggo',
-        surname: 'Mortensen',
-        characterName: 'Aragorn',
-      },
-    },
-  },
-};
-const book1 = {
-  title: 'Pravidla mostarny',
-  author: 'John Irving',
-  pages: 324,
-  genre: 'roman',
-  edition: 2005,
+/*****ZADÁNÍ 14.*****/
+/*
+E-maily
 
+Vytvořte stránku, která bude pracovat s e-mailovými adresami ve formátu
+
+jmeno.prijmeni@domena
+Tedy například:
+
+petr.novak@gmail.com
+romana.nejedla@czechitas.cz
+slavomir.ponuchalek@yahoo.com
+Postupujte dle následujících kroků.
+
+a) Vytvořte jednoduchou webovou stránku s JavaScriptovým programem.
+b) Nechte uživatele zadat jeho e-mail a uložte si jej do proměnné email.
+c) Pomocí metody indexOf najděte v tomto e-mailu pozici znaku zavináč. Tuto pozici si uložte do proměnné atIndex.
+d) Pomocí metody slice získejte z e-mailu první část představující jméno a příjmení uživatele.
+e) Dále z e-mailu získehte název domény tedy například gmail.com.
+f) Ze získaných informací vytvořte objekt, který bude vypadat například takto:
+const parsedEmail = {
+  userName: 'slavomir.ponuchalek',
+  domain: 'yahoo.com',
+};
+g) Pro kontrolu vypište tento objekt do stránky. Každou hodnotu vypište jako odstavec.
+
+*/
+
+const userEmail = prompt('Zadej email:');
+const atIndex = userEmail.indexOf('@');
+console.log(atIndex);
+const name = userEmail.slice(0, atIndex);
+const domena = userEmail.slice(atIndex);
+
+const email = {
+  name: 'inna.cervenkova',
+  domena: '@gmail.com'
+};
+
+/*
+ reseni od lektora:
+
+const email={
+name:userEmail.slice(0, atIndex);
+domena:userEmail.slice(atIndex+1);
 }
 
+*/
 
-
+document.body.innerHTML = `
+<p>Jmeno: ${name}</p>
+<p>Domena: ${domena}</p>
+`
